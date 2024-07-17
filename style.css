@@ -73,6 +73,10 @@ section.menu {
         display: flex;
         flex-direction: row;
         gap: 32px;
+
+        .menu__list__item:hover {
+            text-decoration: underline;
+        }
     }
 
     /*correo solo*/
@@ -110,6 +114,11 @@ section.title{
 
         .title__subsection {
             font-size: 22px;
+        }
+    
+        /*menu pequeño*/
+        .title__network__item:hover {
+            text-decoration: underline;
         }
     }
 
@@ -261,6 +270,7 @@ section.experience {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    padding: 20px 0;
 
     /*titulo*/
     .experience__section__title {
@@ -270,7 +280,6 @@ section.experience {
     /*contenedor imagen y texto*/
     .experience__box {
         display: flex;
-        flex-wrap: wrap;
         gap: 16px;
     }
 
@@ -287,6 +296,9 @@ section.experience {
         font-size: 16px;
         color: white;
         padding: 10px;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     .experiencia__botao--repo {
@@ -298,12 +310,23 @@ section.experience {
         font-size: 16px;
         color: rgb(166, 80, 200);
         padding: 10px;
+        &:hover {
+            transform: scale(1.1);
+        }
     } 
 
     /*imagenes*/
     .experience__img {
         width: 752px;
         height: 406px;
+        border-radius: 30px;
+        box-sizing: border-box;
+    }
+
+    .experience__box:nth-child(even) {
+        .experience__img {
+            order: 2;
+        }
     }
 }
 
@@ -325,7 +348,6 @@ section.formcontato {
     .formcontato__form {
         display: flex;
         flex-direction: column;
-        gap: 32px;
     }
 
     /*imagen del telefono*/
@@ -338,6 +360,13 @@ section.formcontato {
         padding: 8px;
     }
 
+    /*mensaje span*/
+    .mensaje-error {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        color: rgb(166, 80, 200);
+    }
+
     /*boton enviar*/
     .formcontato__botao {
         width: fit-content;
@@ -347,6 +376,9 @@ section.formcontato {
         font-size: 16px;
         color: white;
         padding: 10px;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
 
@@ -381,6 +413,9 @@ Utiliza las referencias de los breakpoints @media abajo */
         /*contacto solito*/
         .menu__list__item__contato {
             display: inline-block;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
    
@@ -543,7 +578,6 @@ Utiliza las referencias de los breakpoints @media abajo */
 
     /*contacto*/
     section.formcontato {
-
         .formcontato__img {
             display: none;
         }
@@ -551,7 +585,6 @@ Utiliza las referencias de los breakpoints @media abajo */
         .formcontato__text {
             width: 704px;
             height: 573px;
-            gap: 32px;
         }
 
         .formcontato__title {
@@ -560,6 +593,12 @@ Utiliza las referencias de los breakpoints @media abajo */
 
         .formcontato__subtext {
             font-size: 16px;
+        }
+
+        .mensaje-error {
+            margin-top: 12px;
+            margin-bottom: 12px;
+            color: rgb(166, 80, 200);
         }
     }
 }
@@ -591,6 +630,9 @@ Utiliza las referencias de los breakpoints @media abajo */
             
             .menu__list__item__contato {
                 font-size: 14px;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -713,6 +755,12 @@ Utiliza las referencias de los breakpoints @media abajo */
             width: 296px;
             height: 56px;
             padding: 0 9px;
+        }
+
+        .mensaje-error {
+            margin-top: 12px;
+            margin-bottom: 12px;
+            color: rgb(166, 80, 200);
         }
     }
 
